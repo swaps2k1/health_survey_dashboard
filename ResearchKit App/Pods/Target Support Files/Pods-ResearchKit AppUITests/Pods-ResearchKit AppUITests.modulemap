@@ -1,0 +1,6 @@
+framework module Pods_ResearchKit_AppUITests {
+  umbrella header "Pods-ResearchKit AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
