@@ -1,0 +1,6 @@
+framework module Pods_Health_Dashboard {
+  umbrella header "Pods-Health_Dashboard-umbrella.h"
+
+  export *
+  module * { export * }
+}

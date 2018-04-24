@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7cf-xG-kZ7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Health_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Z5-XZ-tkt">
+                                <rect key="frame" x="158.5" y="127.5" width="58" height="30"/>
+                                <state key="normal" title="Consent"/>
+                                <connections>
+                                    <action selector="consentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYG-ES-Lq1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8n7-Ao-2iN">
+                                <rect key="frame" x="142.5" y="197.5" width="90" height="30"/>
+                                <state key="normal" title="Survey Tasks"/>
+                                <connections>
+                                    <action selector="surveyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWo-gI-sKC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyH-Cs-Ql9">
+                                <rect key="frame" x="118" y="267.5" width="139" height="30"/>
+                                <state key="normal" title="Action Task (Type 1)"/>
+                                <connections>
+                                    <action selector="actionTaskButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UVs-ga-XNe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dy3-mN-pEe">
+                                <rect key="frame" x="117" y="337.5" width="141" height="30"/>
+                                <state key="normal" title="Action Task (Type 2)"/>
+                                <connections>
+                                    <action selector="actionTaskType2ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5S-2T-sFf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zni-eD-eNR">
+                                <rect key="frame" x="94.5" y="505.5" width="186" height="30"/>
+                                <state key="normal" title="CareKit Health Dashboards"/>
+                                <connections>
+                                    <action selector="careKitDashboardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUi-B9-fUZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CareKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skv-sW-AGG">
+                                <rect key="frame" x="20" y="442.5" width="66.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResearchKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ts-OL-oJ8">
+                                <rect key="frame" x="20" y="84" width="108.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7ts-OL-oJ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="02X-sE-UTG"/>
+                            <constraint firstItem="Skv-sW-AGG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IZC-Xz-2ep"/>
+                            <constraint firstItem="zni-eD-eNR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="T5t-wn-LfU"/>
+                            <constraint firstItem="7ts-OL-oJ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="VPx-xi-zq5"/>
+                            <constraint firstItem="zni-eD-eNR" firstAttribute="top" secondItem="Skv-sW-AGG" secondAttribute="bottom" constant="40" id="WCY-ps-4Z8"/>
+                            <constraint firstItem="Dy3-mN-pEe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yx7-du-luX"/>
+                            <constraint firstItem="AyH-Cs-Ql9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZU0-fe-lMm"/>
+                            <constraint firstItem="Skv-sW-AGG" firstAttribute="top" secondItem="Dy3-mN-pEe" secondAttribute="bottom" constant="75" id="ajj-QF-Fyf"/>
+                            <constraint firstItem="9Z5-XZ-tkt" firstAttribute="top" secondItem="7ts-OL-oJ8" secondAttribute="bottom" constant="20" id="d79-U8-qjJ"/>
+                            <constraint firstItem="Dy3-mN-pEe" firstAttribute="top" secondItem="AyH-Cs-Ql9" secondAttribute="bottom" constant="40" id="dHW-j3-T07"/>
+                            <constraint firstItem="9Z5-XZ-tkt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hcl-tj-rSY"/>
+                            <constraint firstItem="8n7-Ao-2iN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ow2-bY-cav"/>
+                            <constraint firstItem="AyH-Cs-Ql9" firstAttribute="top" secondItem="8n7-Ao-2iN" secondAttribute="bottom" constant="40" id="sBn-OD-UM2"/>
+                            <constraint firstItem="8n7-Ao-2iN" firstAttribute="top" secondItem="9Z5-XZ-tkt" secondAttribute="bottom" constant="40" id="wl4-Rf-qyD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XRc-SC-YT9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="117.39130434782609"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="Nv9-Ye-9b8">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" id="QfV-Ag-hly" customClass="TabBarViewController" customModule="Health_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4e6-Xw-P1U"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gsT-eX-6cP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKj-ro-Fxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.8" y="115.59220389805098"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cxL-Mo-hDj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7cf-xG-kZ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9bs-HV-akq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1GV-IB-ICd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vir-bw-kka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>

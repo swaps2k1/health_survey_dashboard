@@ -1,0 +1,6 @@
+framework module Pods_Health_DashboardUITests {
+  umbrella header "Pods-Health_DashboardUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

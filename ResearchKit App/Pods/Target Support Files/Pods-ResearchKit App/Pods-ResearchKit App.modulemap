@@ -1,6 +1,0 @@
-framework module Pods_ResearchKit_App {
-  umbrella header "Pods-ResearchKit App-umbrella.h"
-
-  export *
-  module * { export * }
-}
