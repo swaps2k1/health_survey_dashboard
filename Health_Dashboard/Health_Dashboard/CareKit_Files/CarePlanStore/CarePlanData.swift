@@ -19,6 +19,10 @@ enum ActivityIdentifier: String {
 
 class CarePlanData: NSObject {
     let carePlanStore: OCKCarePlanStore
+    let contacts =
+        [OCKContact(contactType: .personal, name: "John Lee", relation: "Friend", contactInfoItems: [.email("johnlee@xyz.com"), .phone("888-555-2351"), .sms("888-555-2351")], tintColor: nil, monogram: "JL", image: nil),
+         OCKContact(contactType: .careTeam, name: "Carl Harper", relation: "Therapist", contactInfoItems:[.email("carlharper@xyz.com"), .phone("888-555-2351"), .sms("888-555-2351")], tintColor: nil, monogram: "CH", image: nil),
+         OCKContact(contactType: .careTeam, name: "Dr. Michell Hall", relation: "Veterinarian", contactInfoItems: [.email("michellhall@xyz.com"), .phone("888-555-2351"), .sms("888-555-2351")], tintColor: nil, monogram: "MH", image: nil)]
     
     class func dailyScheduleRepeating(occurencesPerDay: UInt) -> OCKCareSchedule {
         return OCKCareSchedule.dailySchedule(withStartDate: DateComponents.firstDateOfCurrentWeek,
@@ -103,4 +107,18 @@ class CarePlanData: NSObject {
     }
 }
 
-
+extension CarePlanData {
+    func generateDocumentWith(chart: OCKChart?) -> OCKDocument {
+        let intro = OCKDocumentElementParagraph(content: "I've been tracking my efforts to stay healthy. Please check the attached report to see if my health is good.")
+        
+        var documentElements: [OCKDocumentElement] = [intro]
+        if let chart = chart {
+            documentElements.append(OCKDocumentElementChart(chart: chart))
+        }
+        
+        let document = OCKDocument(title: "Re: Your Brains", elements: documentElements)
+        document.pageHeader = "Weekly Report"
+        
+        return document
+    }
+}

@@ -26,6 +26,8 @@
 		48A2C659208F137D00468068 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A2C658208F137D00468068 /* HealthKit.framework */; };
 		48A2C65B208F246F00468068 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48A2C65A208F246F00468068 /* Info.plist */; };
 		48A2C65F208F3F6400468068 /* OCKInsightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2C65E208F3F6400468068 /* OCKInsightItem.swift */; };
+		48A2C661208F42DB00468068 /* InsightsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2C660208F42DB00468068 /* InsightsDataManager.swift */; };
+		48A2C664208F5A7A00468068 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2C663208F5A7A00468068 /* DataHelper.swift */; };
 		70BAA2E5E94EF75DAA754230 /* Pods_Health_Dashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB214925E68B39D03DA68B3C /* Pods_Health_Dashboard.framework */; };
 		E237FF29F2B0A5C4DCE4A628 /* Pods_Health_DashboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C88E89F03B70B8C52D02A7F /* Pods_Health_DashboardUITests.framework */; };
 		FBBB1048FFFA7DD1D5EB27E4 /* Pods_Health_DashboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49460A397F39F903120F11EA /* Pods_Health_DashboardTests.framework */; };
@@ -76,6 +78,8 @@
 		48A2C658208F137D00468068 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		48A2C65A208F246F00468068 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Health_Dashboard/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		48A2C65E208F3F6400468068 /* OCKInsightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCKInsightItem.swift; sourceTree = "<group>"; };
+		48A2C660208F42DB00468068 /* InsightsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsDataManager.swift; sourceTree = "<group>"; };
+		48A2C663208F5A7A00468068 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		49460A397F39F903120F11EA /* Pods_Health_DashboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_DashboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C88E89F03B70B8C52D02A7F /* Pods_Health_DashboardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_DashboardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5565E873FA42B8109BAB500F /* Pods-Health_Dashboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_Dashboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health_Dashboard/Pods-Health_Dashboard.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 			children = (
 				48A2C652208DFF7700468068 /* NSDateComponents.swift */,
 				48A2C65E208F3F6400468068 /* OCKInsightItem.swift */,
+				48A2C663208F5A7A00468068 /* DataHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				48A2C64F208DFE8B00468068 /* CarePlanData.swift */,
 				48A2C648208DF9EF00468068 /* CarePlanStoreManager.swift */,
 				48A2C654208F0A0400468068 /* AssessmentTaskFactory.swift */,
+				48A2C660208F42DB00468068 /* InsightsDataManager.swift */,
 			);
 			path = CarePlanStore;
 			sourceTree = "<group>";
@@ -479,7 +485,9 @@
 				48A2C653208DFF7700468068 /* NSDateComponents.swift in Sources */,
 				48A2C65F208F3F6400468068 /* OCKInsightItem.swift in Sources */,
 				48A2C64E208DFB4C00468068 /* TabBarViewController.swift in Sources */,
+				48A2C664208F5A7A00468068 /* DataHelper.swift in Sources */,
 				48A2C650208DFE8B00468068 /* CarePlanData.swift in Sources */,
+				48A2C661208F42DB00468068 /* InsightsDataManager.swift in Sources */,
 				48A2C655208F0A0400468068 /* AssessmentTaskFactory.swift in Sources */,
 				48A2C640208A118200468068 /* ActiveTask.swift in Sources */,
 				48A2C63E208A116600468068 /* SurveyTask.swift in Sources */,
