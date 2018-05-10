@@ -27,6 +27,8 @@
 		48A2C65B208F246F00468068 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48A2C65A208F246F00468068 /* Info.plist */; };
 		48A2C65F208F3F6400468068 /* OCKInsightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A2C65E208F3F6400468068 /* OCKInsightItem.swift */; };
 		70BAA2E5E94EF75DAA754230 /* Pods_Health_Dashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB214925E68B39D03DA68B3C /* Pods_Health_Dashboard.framework */; };
+		7FA0EBC020A33F9F007FAFFE /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0EBBF20A33F9F007FAFFE /* ConsentDocument.swift */; };
+		7FA0EBC220A34501007FAFFE /* ConsentTask1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0EBC120A34501007FAFFE /* ConsentTask1.swift */; };
 		E237FF29F2B0A5C4DCE4A628 /* Pods_Health_DashboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C88E89F03B70B8C52D02A7F /* Pods_Health_DashboardUITests.framework */; };
 		FBBB1048FFFA7DD1D5EB27E4 /* Pods_Health_DashboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49460A397F39F903120F11EA /* Pods_Health_DashboardTests.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,8 @@
 		5565E873FA42B8109BAB500F /* Pods-Health_Dashboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_Dashboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health_Dashboard/Pods-Health_Dashboard.debug.xcconfig"; sourceTree = "<group>"; };
 		6137FD8A82681169F75D13F0 /* Pods-Health_DashboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_DashboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health_DashboardTests/Pods-Health_DashboardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72A8A14E956989532E48C978 /* Pods-Health_DashboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_DashboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health_DashboardUITests/Pods-Health_DashboardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7FA0EBBF20A33F9F007FAFFE /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		7FA0EBC120A34501007FAFFE /* ConsentTask1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentTask1.swift; sourceTree = "<group>"; };
 		AE56741EA5948F342BBE1069 /* Pods-Health_DashboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_DashboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health_DashboardUITests/Pods-Health_DashboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB214925E68B39D03DA68B3C /* Pods_Health_Dashboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_Dashboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -192,6 +196,8 @@
 		48A2C64A208DFA8200468068 /* ResearchKit_Files */ = {
 			isa = PBXGroup;
 			children = (
+				7FA0EBBF20A33F9F007FAFFE /* ConsentDocument.swift */,
+				7FA0EBC120A34501007FAFFE /* ConsentTask1.swift */,
 				48A2C63B2088A97700468068 /* ConsentTask.swift */,
 				48A2C63D208A116600468068 /* SurveyTask.swift */,
 				48A2C63F208A118200468068 /* ActiveTask.swift */,
@@ -270,6 +276,7 @@
 				48A2C6072088988300468068 /* Frameworks */,
 				48A2C6082088988300468068 /* Resources */,
 				2EAD25B00C361F88E0AC85C7 /* [CP] Embed Pods Frameworks */,
+				09D0ED2FA66CECAEA87C10A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +295,8 @@
 				48A2C61A2088988500468068 /* Sources */,
 				48A2C61B2088988500468068 /* Frameworks */,
 				48A2C61C2088988500468068 /* Resources */,
+				994762E1B9B594FE7301563A /* [CP] Embed Pods Frameworks */,
+				CA1260285B341CA9948DCE62 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,6 +316,8 @@
 				48A2C6252088988500468068 /* Sources */,
 				48A2C6262088988500468068 /* Frameworks */,
 				48A2C6272088988500468068 /* Resources */,
+				91DE4B6BE90F9FF85EF6D070 /* [CP] Embed Pods Frameworks */,
+				DC682962348472569ED2541E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -413,6 +424,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		09D0ED2FA66CECAEA87C10A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health_Dashboard/Pods-Health_Dashboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2EAD25B00C361F88E0AC85C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,6 +477,51 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		91DE4B6BE90F9FF85EF6D070 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health_DashboardUITests/Pods-Health_DashboardUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		994762E1B9B594FE7301563A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health_DashboardTests/Pods-Health_DashboardTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA1260285B341CA9948DCE62 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health_DashboardTests/Pods-Health_DashboardTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CCB5BDE59E49E493E9C7C4D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,6 +540,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DC682962348472569ED2541E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health_DashboardUITests/Pods-Health_DashboardUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -481,9 +567,11 @@
 				48A2C64E208DFB4C00468068 /* TabBarViewController.swift in Sources */,
 				48A2C650208DFE8B00468068 /* CarePlanData.swift in Sources */,
 				48A2C655208F0A0400468068 /* AssessmentTaskFactory.swift in Sources */,
+				7FA0EBC020A33F9F007FAFFE /* ConsentDocument.swift in Sources */,
 				48A2C640208A118200468068 /* ActiveTask.swift in Sources */,
 				48A2C63E208A116600468068 /* SurveyTask.swift in Sources */,
 				48A2C63C2088A97700468068 /* ConsentTask.swift in Sources */,
+				7FA0EBC220A34501007FAFFE /* ConsentTask1.swift in Sources */,
 				48A2C649208DF9EF00468068 /* CarePlanStoreManager.swift in Sources */,
 				48A2C642208DBC2F00468068 /* ActiveTaskType2.swift in Sources */,
 				48A2C6102088988300468068 /* ViewController.swift in Sources */,
@@ -593,7 +681,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -647,7 +735,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
