@@ -31,6 +31,8 @@
 		70BAA2E5E94EF75DAA754230 /* Pods_Health_Dashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB214925E68B39D03DA68B3C /* Pods_Health_Dashboard.framework */; };
 		7FA0EBC020A33F9F007FAFFE /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0EBBF20A33F9F007FAFFE /* ConsentDocument.swift */; };
 		7FA0EBC220A34501007FAFFE /* ConsentTask1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0EBC120A34501007FAFFE /* ConsentTask1.swift */; };
+		7FA0EBC420A42B23007FAFFE /* Data Privacy.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA0EBC320A42B23007FAFFE /* Data Privacy.pdf */; };
+		7FA0EBC620A4327C007FAFFE /* Data Privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 7FA0EBC520A4327B007FAFFE /* Data Privacy.html */; };
 		E237FF29F2B0A5C4DCE4A628 /* Pods_Health_DashboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C88E89F03B70B8C52D02A7F /* Pods_Health_DashboardUITests.framework */; };
 		FBBB1048FFFA7DD1D5EB27E4 /* Pods_Health_DashboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49460A397F39F903120F11EA /* Pods_Health_DashboardTests.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +91,8 @@
 		72A8A14E956989532E48C978 /* Pods-Health_DashboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_DashboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health_DashboardUITests/Pods-Health_DashboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7FA0EBBF20A33F9F007FAFFE /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		7FA0EBC120A34501007FAFFE /* ConsentTask1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentTask1.swift; sourceTree = "<group>"; };
+		7FA0EBC320A42B23007FAFFE /* Data Privacy.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Data Privacy.pdf"; sourceTree = "<group>"; };
+		7FA0EBC520A4327B007FAFFE /* Data Privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Data Privacy.html"; sourceTree = "<group>"; };
 		AE56741EA5948F342BBE1069 /* Pods-Health_DashboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health_DashboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health_DashboardUITests/Pods-Health_DashboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB214925E68B39D03DA68B3C /* Pods_Health_Dashboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_Dashboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -252,6 +256,8 @@
 		48A2C65C208F25A500468068 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7FA0EBC320A42B23007FAFFE /* Data Privacy.pdf */,
+				7FA0EBC520A4327B007FAFFE /* Data Privacy.html */,
 				48A2C6142088988400468068 /* Assets.xcassets */,
 				48A2C65A208F246F00468068 /* Info.plist */,
 				48A2C657208F136100468068 /* Health_Dashboard.entitlements */,
@@ -388,8 +394,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA0EBC620A4327C007FAFFE /* Data Privacy.html in Resources */,
 				48A2C65B208F246F00468068 /* Info.plist in Resources */,
 				48A2C6182088988400468068 /* LaunchScreen.storyboard in Resources */,
+				7FA0EBC420A42B23007FAFFE /* Data Privacy.pdf in Resources */,
 				48A2C6152088988400468068 /* Assets.xcassets in Resources */,
 				48A2C6132088988300468068 /* Main.storyboard in Resources */,
 			);

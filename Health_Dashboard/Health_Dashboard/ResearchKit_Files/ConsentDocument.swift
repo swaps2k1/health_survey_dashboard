@@ -22,13 +22,27 @@ public var ConsentDocument: ORKConsentDocument {
         .timeCommitment,
         .studySurvey,
         .studyTasks,
-        .withdrawing
+        .withdrawing,
+        .onlyInDocument
     ]
     
     let consentSections: [ORKConsentSection] = sectionTypes.map { contentSectionType in
         let consentSection = ORKConsentSection(type: contentSectionType)
-        consentSection.summary = "If you wish to complete this study..."
-        consentSection.content = "In this study you will be asked five (wait, no, three!) questions. You will also have your voice recorded for ten seconds."
+        if contentSectionType == .onlyInDocument {
+            if let fileURL = Bundle.main.url(forResource: "Data Privacy", withExtension: "html") {
+                consentSection.summary = "Detail Document"
+                do {
+                    let contentString = try String.init(contentsOf: fileURL)
+                    consentSection.htmlContent = contentString
+                } catch let error {
+                    print(error)
+                    consentSection.htmlContent = "Haila!! Read nahi hua"
+                }
+            }
+        } else {
+            consentSection.summary = "If you wish to complete this study..."
+            consentSection.content = "In this study you will be asked five (wait, no, three!) questions. You will also have your voice recorded for ten seconds."
+        }
         return consentSection
     }
     
