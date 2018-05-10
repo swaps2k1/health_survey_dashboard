@@ -28,9 +28,18 @@ public var ConsentTask: ORKOrderedTask {
         let consentSection = ORKConsentSection(type: consentSectionType)
         consentSection.summary = "Complete the study"
         consentSection.content = "This survey will ask you three questions and you will also measure your tapping speed by performing a small activity."
+        
+        //============================================================
+        //================ ResearchKit Customizations ================
+        //============================================================
+        consentSection.customImage = UIImage(named: "care_card")
+        //consentSection.customAnimationURL = URL(fileURLWithPath: "animation.gif")
+        consentSection.customLearnMoreButtonTitle = "Know more"
+        //============================================================
+        
         return consentSection
     })
-    
+
     document.sections = consentSections
     document.addSignature(ORKConsentSignature(forPersonWithTitle: "Tejas", dateFormatString: "19-Apr-2018", identifier: "signature", givenName: "given name", familyName: "family name", signatureImage: nil, dateString: "date string"))
     

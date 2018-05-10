@@ -9,8 +9,12 @@
 import ResearchKit
 import CareKit
 
+protocol CarePlanStoreManagerDelegate: class {
+    func carePlanStore(_: OCKCarePlanStore, didUpdateInsights insights: [OCKInsightItem])
+}
+
 class CarePlanStoreManager: NSObject {
-    
+    weak var delegate: CarePlanStoreManagerDelegate?
     static let sharedCarePlanStoreManager = CarePlanStoreManager()
     var store: OCKCarePlanStore
     
@@ -27,8 +31,8 @@ class CarePlanStoreManager: NSObject {
         }
         
         store = OCKCarePlanStore(persistenceDirectoryURL: storeURL)
-
         super.init()
+        store.delegate = self
     }
     
     //converting the ResearchKit task result into CareKit
@@ -47,5 +51,19 @@ class CarePlanStoreManager: NSObject {
         
         // 3
         fatalError("Unexpected task result type")
+    }
+    
+    func updateInsights() {
+        InsightsDataManager().updateInsights { (success, insightItems) in
+            guard let insightItems = insightItems, success else { return }
+            self.delegate?.carePlanStore(self.store, didUpdateInsights: insightItems)
+        }
+    }
+}
+
+// MARK: - OCKCarePlanStoreDelegate
+extension CarePlanStoreManager: OCKCarePlanStoreDelegate {
+    func carePlanStore(_ store: OCKCarePlanStore, didReceiveUpdateOf event: OCKCarePlanEvent) {
+        updateInsights()
     }
 }
